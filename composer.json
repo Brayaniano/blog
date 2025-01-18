@@ -1,0 +1,23 @@
+{
+    "name": "br/module-blog",
+    "description": "debelopt",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "version": "2.0.0",
+    "authors": [
+        {
+            "name": "Brayan R",
+            "email": "bryant.br0798@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "BR\\Blog\\": ""
+        }
+    }
+}

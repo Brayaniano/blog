@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">br_blog_blog_listing.br_blog_blog_listing_data_source</item>
+		</item>
+	</argument>
+	<settings>
+		<spinner>br_blog_blog_columns</spinner>
+		<deps>
+			<dep>br_blog_blog_listing.br_blog_blog_listing_data_source</dep>
+		</deps>
+	</settings>
+	<dataSource name="br_blog_blog_listing_data_source" component="Magento_Ui/js/grid/provider">
+		<settings>
+			<storageConfig>
+				<param name="indexField" xsi:type="string">blog_id</param>
+			</storageConfig>
+			<updateUrl path="mui/index/render"/>
+		</settings>
+		<aclResource>BR_Blog::Blog</aclResource>
+		<dataProvider name="br_blog_blog_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+			<settings>
+				<requestFieldName>id</requestFieldName>
+				<primaryFieldName>blog_id</primaryFieldName>
+			</settings>
+		</dataProvider>
+	</dataSource>
+	<listingToolbar name="listing_top">
+		<settings>
+			<sticky>true</sticky>
+		</settings>
+		<bookmark name="bookmarks"/>
+		<columnsControls name="columns_controls"/>
+		<filters name="listing_filters"/>
+		<paging name="listing_paging"/>
+	</listingToolbar>
+	<columns name="br_blog_blog_columns">
+		<selectionsColumn name="ids">
+			<settings>
+				<indexField>blog_id</indexField>
+			</settings>
+		</selectionsColumn>
+		<column name="blog_id">
+			<settings>
+				<filter>text</filter>
+				<sorting>asc</sorting>
+				<label translate="true">ID</label>
+			</settings>
+		</column>
+		<column name="Titulo">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Titulo</label>
+			</settings>
+		</column>
+		<column name="Contenido">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Contenido</label>
+			</settings>
+		</column>
+		<column name="Fecha">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Fecha</label>
+			</settings>
+		</column>
+	</columns>
+</listing>
