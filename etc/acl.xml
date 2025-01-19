@@ -3,11 +3,13 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="BR_Blog::Blog" title="Blog" sortOrder="10">
-					<resource id="BR_Blog::Blog_save" title="Save Blog" sortOrder="10"/>
-					<resource id="BR_Blog::Blog_delete" title="Delete Blog" sortOrder="20"/>
-					<resource id="BR_Blog::Blog_update" title="Update Blog" sortOrder="30"/>
-					<resource id="BR_Blog::Blog_view" title="View Blog" sortOrder="40"/>
+				<resource id="Magento_Backend::content">
+					<resource id="BR_Blog::Blog" title="Blog" sortOrder="10">
+						<resource id="BR_Blog::Blog_save" title="Save Blog" sortOrder="10"/>
+						<resource id="BR_Blog::Blog_delete" title="Delete Blog" sortOrder="20"/>
+						<resource id="BR_Blog::Blog_update" title="Update Blog" sortOrder="30"/>
+						<resource id="BR_Blog::Blog_view" title="View Blog" sortOrder="40"/>
+					</resource>
 				</resource>
 			</resource>
 		</resources>
